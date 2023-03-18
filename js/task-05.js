@@ -1,12 +1,15 @@
-const inputEl = document.querySelector("#name-input");
-const outputEl = document.querySelector("#name-output");
+const refs = {
+  input: document.querySelector("#name-input"),
+  output: document.querySelector("#name-output"),
+};
+  
 
-inputEl.addEventListener(
+refs.input.addEventListener(
   "input",
-  (event) => (outputEl.textContent = event.currentTarget.value)
+  (event) => (refs.output.textContent = event.currentTarget.value)
 );
 
-inputEl.addEventListener(
+refs.input.addEventListener(
   "blur",
-  () => (outputEl.innerHTML = "Anonymous")
+  () => (refs.output.innerHTML = "Anonymous")
 );
