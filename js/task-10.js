@@ -9,7 +9,7 @@ const refs = {
 let size = 30;
 
 refs.createBtn.addEventListener("click", onAddElements);
-refs.destroyBtn.addEventListener("click", onDeleteElements);
+refs.destroyBtn.addEventListener("click", destroyBoxes);
 
 function onAddElements(event) {
   const number = refs.input.value;
@@ -37,7 +37,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-function onDeleteElements(event) {
+function destroyBoxes(event) {
   refs.boxes.innerHTML = '';
   size = 30;
 }
