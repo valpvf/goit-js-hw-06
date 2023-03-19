@@ -27,5 +27,5 @@ const makeGalleryMarkup = ({ url, alt }) => {
   `;
 };
 
-const makeGalleryMarkupHTML = images.map(makeGalleryMarkup).join();
+const makeGalleryMarkupHTML = images.map(makeGalleryMarkup).join('');
 galleryEl.insertAdjacentHTML("afterbegin", makeGalleryMarkupHTML);
