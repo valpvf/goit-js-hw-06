@@ -4,7 +4,6 @@ const refs = {
 };
 
 refs.form.addEventListener("submit", onFormSubmit);
-refs.input.forEach((el) => el.addEventListener("blur", onInput));
 
 function onFormSubmit(event) {
   event.preventDefault();
@@ -12,7 +11,7 @@ function onFormSubmit(event) {
     elements: { email: login, password },
   } = event.currentTarget;
 
-  if (login.value === "" || password.value === "") {
+  if (!login.value || !password.value) {
     return alert("Please fill in all the fields!");
   }
 
@@ -23,10 +22,4 @@ function onFormSubmit(event) {
   console.log(submitData);
 
   event.currentTarget.reset();
-}
-
-function onInput(event) {
-  if (event.currentTarget.value.length === 0) {
-    alert("Please fill in all the fields!");
-  }
 }

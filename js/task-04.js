@@ -10,9 +10,9 @@ let counterValue = 0;
 
 buttonMinusEl.addEventListener("click", () => {
   counterValue -= 1;
-  counterEl.innerHTML = counterValue;
+  counterEl.textContent = counterValue;
 });
 buttonPlusEl.addEventListener("click", () => {
   counterValue += 1;
-  counterEl.innerHTML = counterValue;
+  counterEl.textContent = counterValue;
 });

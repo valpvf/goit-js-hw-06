@@ -3,7 +3,7 @@ const refs = {
   controls: document.querySelector("#controls"),
   input: controls.querySelector("input"),
   createBtn: controls.querySelector("button[data-create]"),
-  destroyBtn: controls.querySelector("button[data-destroy]"),  
+  destroyBtn: controls.querySelector("button[data-destroy]"),
 };
 
 let size = 30;
@@ -14,11 +14,10 @@ refs.destroyBtn.addEventListener("click", destroyBoxes);
 function onAddElements(event) {
   const number = refs.input.value;
   size = createElements(number, size);
-
 }
 
 function createElements(number, size) {
-  const elementsArr = [];  
+  const elementsArr = [];
   for (let i = 0; i < number; i += 1) {
     const element = document.createElement("div");
     element.style.width = `${size}px`;
@@ -38,6 +37,6 @@ function getRandomHexColor() {
 }
 
 function destroyBoxes(event) {
-  refs.boxes.innerHTML = '';
+  refs.boxes.innerHTML = "";
   size = 30;
 }
